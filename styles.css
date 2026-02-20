@@ -1,0 +1,390 @@
+
+h2 {
+  color: #d63384;
+  padding-bottom: 5px;
+  margin-top: 25px;
+}
+
+h3 {
+  color: #c2185b;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.tank-option {
+    display: flex;
+    flex-direction: column; /* stack label + description */
+    margin-top: 15px;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between; /* label left, checkbox right */
+    align-items: center;
+}
+
+.label-row span {
+    display: inline-block;
+    width: 200px; /* fixed width for all labels, adjust as needed */
+    white-space: nowrap;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #c2185b;
+}
+
+.label-row input[type="checkbox"] {
+    transform: scale(1.2);
+    margin: 0;
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+    background:  
+    url(images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.5); /*transparent*/
+ backdrop-filter: blur(15px) ;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* soft shadow */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #c2185b; /* deep pink for labels */
+}
+
+input, select, button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ff99c2; /* pink border */
+  box-sizing: border-box;
+}
+
+input:focus, select:focus {
+  border-color: #ff66a3; /* darker pink on focus */
+  outline: none;
+}
+
+button {
+  background: #ff66a3; /* medium pink */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #d63384; /* dark pink on hover */
+}
+
+.fish-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border: 1px solid #ff99c2; /* pink border */
+  padding: 10px;
+  border-radius: 8px;
+  background:#fae9eb;
+background: rgba(255, 255, 255, 0.5); /*transparent*/
+}
+
+.fish-card img {
+  width: 100px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 15px;
+  border: 2px solid #ff66a3; /* image border in pink */
+}
+
+.fish-info h3 {
+  margin: 0;
+  font-size: 1.1em;
+  color: #d63384; /* dark pink title */
+}
+
+.fish-info p {
+  margin: 2px 0;
+  font-size: 0.9em;
+  color: #c2185b; /* deep pink text */
+}
+
+/* Warning & good messages */
+.warning {
+  color: #b71c1c; /* dark red/pink for warnings */
+  font-weight: bold;
+}
+
+.good {
+  color: #c2185b; /* good vibes pink */
+  font-weight: bold;
+}
+
+/* Favorites Section */
+#favorites {
+  background-color: #ffe6f0;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.favorite-item button {
+  background-color: #ff66a3;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.favorite-item button:hover {
+  background-color: #d63384;
+  transform: scale(1.05);
+}
+
+button#saveFavoriteBtn {
+  background-color: #ff99c2;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  margin: 10px 0;
+  transition: 0.2s;
+}
+
+button#saveFavoriteBtn:hover {
+  background-color: #ff66a3;
+  transform: scale(1.05);
+}
+
+
+
+.favorite-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffe6f0;
+  border: 1px solid #ffb6c1;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 8px;
+  color: #d63384;
+}
+
+.favorite-item button {
+  background: #d63384;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 5px 10px;  
+  font-size: 14px;     
+  /* font-weight: normal;  */
+  transition: 0.2s;
+  width: auto;  
+}
+
+.favorite-item button:hover {
+  background: #a31f5d;
+}
+
+/* WILDCARD */
+
+#wildcardSelected {
+  margin-top: 10px;
+  padding: 5px;
+  background: #ffe6f0;
+  border-radius: 8px;
+}
+
+.wildcard-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px 0;
+  padding: 4px 8px;
+  background: #fff0f5;
+  border-radius: 5px;
+  color: #d63384;
+}
+
+.wildcard-item button {
+  background: #d63384;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 2px 6px;
+  cursor: pointer;
+  font-size: 14px;     
+  transition: 0.2s;
+  width: auto;  
+}
+
+
+/* App Bio Glass Effect*/
+
+.app-bio {
+    background: rgba(255, 230, 240, 0.25); /* glass */
+    backdrop-filter: blur(12px) saturate(150%);
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+    border-radius: 14px;
+    margin: 20px 0;
+    font-size: 1.05em;
+    line-height: 1.6;
+    color: #4a001f;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    padding: 22px;
+    font-family: Arial, sans-serif;
+    font-style: italic; 
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.app-bio:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 25px rgba(0, 0, 0, 0.15);
+}
+
+.app-bio p {
+    margin-bottom: 10px;
+}
+
+.app-bio strong {
+    color: #d63384; /* pink highlight for app name */
+    font-weight: bold;
+}
+
+
+
+/* ===============================
+   Glass/Neon Text with Shimmer Animation
+================================= */
+
+/* Keyframes for shimmer effect */
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* App Title */
+h1 {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    color: #ff66a3;
+    background: linear-gradient(45deg, #ff66a3, #d63384, #ff99c2, #ff66a3);
+    background-size: 400% 100%; /* for animation movement */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    animation: shimmer 5s linear infinite;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+h1:hover {
+    text-shadow: 
+        0 0 10px #ff66a3,
+        0 0 20px #d63384,
+        0 0 30px #ff99c2,
+        0 0 40px #ff66a3,
+        0 0 50px #ff66a3;
+    transform: scale(1.05);
+}
+
+/* App Slogan / Tagline */
+.tagline {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+     font-style: italic;
+    color: #ff66a3;
+    background: linear-gradient(45deg, #ff66a3, #d63384, #ff99c2, #ff66a3);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    animation: shimmer 5s linear infinite;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.tagline:hover {
+    text-shadow: 
+        0 0 5px #ff66a3,
+        0 0 10px #d63384,
+        0 0 15px #ff99c2;
+    transform: scale(1.02);
+}
+
+
+/* Video Background */
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  z-index: -1;                 /* behind all content */
+  filter: brightness(0.6) blur(0.5px);  /* slightly dark and dreamy */
+  pointer-events: none;        /* allow clicks through video */
+}
+
+.score-number {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ff4da6;
+    text-align: center;
+}
+
+.score-label {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.meter-bar {
+    width: 100%;
+    height: 18px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.meter-fill {
+    height: 100%;
+    transition: width 0.6s ease;
+}

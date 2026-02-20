@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tank Tinder | Where Fish Find Their Soulmates</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Video Background -->
+    <video autoplay muted loop id="bgVideo">
+        <source src="videos/aquarium.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <h1> 💖 Tank Tinder 💖 </h1>
+        <div class="tagline">Where Fish Find Their Soulmates.</div>
+
+        <!-- App Bio -->
+        <div class="app-bio">
+            <p>
+                Discover the perfect match for your aquarium! <strong>Tank Tinder</strong> helps you select compatible
+                fish,
+                plan your tank, and maintain a healthy, stress-free aquatic environment. Perfect for beginners and
+                experienced
+                hobbyists alike.
+            </p>
+            <p>
+                Create vibrant, thriving aquariums with ease. From tiny tanks to larger setups, <strong>Tank
+                    Tinder</strong>
+                guides you every step of the way—so your fish are happy, your water stays stable, and your tank looks
+                stunning.
+            </p>
+        </div>
+
+        <!-- Tank Size -->
+        <div class="tank-info">
+            <h2>1. Tank Details</h2>
+            <h3>🫧 Tank Size (gallons)</h3>
+            <input type="number" id="tankSize" placeholder="e.g. 20">
+        </div>
+
+        <!-- Choosing Fish -->
+        <div class="fish-selection">
+            <h2>2. Choosing Fish to Build Your Tank</h2>
+
+            <h3>🐠 Main Fish</h3>
+            <small>(Main species you love most)</small>
+            <select id="mainFish"></select>
+
+            <h3>🐟 Second Fish</h3>
+            <small>(Second species you want to pair)</small>
+            <select id="bestFriendFish"></select>
+
+            <h3>🐬 Extra Fish</h3>
+            <small>(Type your own choice — we’ll check if it exists)</small>
+            <input type="text" id="wildcardFish" placeholder="Type fish name">
+            <div id="wildcardResults"></div>
+            <div id="wildcardSelected"></div>
+        </div>
+
+        <!-- Optional Additions -->
+        <div class="tank-additions">
+            <h2>3. Optional Tank Additions</h2>
+
+            <div class="tank-option">
+                <div class="label-row">
+                    <span>🦐 Include Shrimp</span>
+                    <input type="checkbox" id="addShrimp">
+                </div>
+                <small>Friendly cleaners that eat leftover food and algae, helping keep your tank healthy.</small>
+            </div>
+
+            <div class="tank-option">
+                <div class="label-row">
+                    <span>🐌 Include Snails</span>
+                    <input type="checkbox" id="addSnail">
+                </div>
+                <small>Natural recyclers that graze on algae and waste, keeping surfaces clean.</small>
+            </div>
+
+            <div class="tank-option">
+                <div class="label-row">
+                    <span> 🪸 Include Plants</span>
+                    <input type="checkbox" id="addPlants">
+                </div>
+                <small>Live plants provide oxygen, hideouts, and improve water quality for happier fish.</small>
+            </div>
+        </div>
+
+
+        <!-- Search Button & Results -->
+        <div class="results-section">
+            <button id="searchBtn">💖 Find Soulmates 💖</button>
+            <div id="results"></div>
+        </div>
+
+        <!-- Favorites -->
+        <div class="favorites-section">
+            <h2>4. Favorites </h2>
+            <div id="favorites" class="favorites-container">
+                <p>No favorites yet. Click 💖 to save a fish!</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
